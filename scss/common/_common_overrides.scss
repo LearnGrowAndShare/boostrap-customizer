@@ -1,0 +1,101 @@
+.accordion {
+  .accordion-item {
+    border: none;
+    .accordion-button {
+      border-radius: 1rem !important;
+      margin-bottom: 1rem;
+      font-weight: 500px;
+      &:focus {
+        z-index: 3;
+        border-color: none;
+        outline: 0;
+        box-shadow: none;
+      }
+      &:not(.collapsed) {
+        background-color: black;
+      }
+      &.collapsed {
+        background-color: red;
+      }
+    }
+    .accordion-header {
+    }
+
+    .accordion-collapse {
+    }
+  }
+}
+
+.navbar {
+  background-color: lighten(blue, 28);
+  font-weight: 400;
+  .navbar-nav {
+    .nav-link {
+      color: #000000;
+      font-size: 1.1em;
+    }
+
+    &:hover {
+      color: darken(blue, 30);
+    }
+    &:focus {
+      color: darken(blue, 50);
+    }
+  }
+
+  .navbar-toggler {
+    font-size: 2rem;
+    color: white;
+    background-color: blue;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    float: right;
+    line-height: 2rem;
+
+    &:hover {
+      color: blue;
+    }
+    &:active {
+      color: blue;
+    }
+    &:hover {
+      color: blue;
+    }
+  }
+
+  a {
+    &.nav-link {
+      font-size: 1.1rem !important;
+      font-weight: 700;
+      transition: all 0.1s ease;
+      padding: 10px !important;
+    }
+  }
+  &.normal-link {
+    font-weight: 600;
+    margin: 0.8rem;
+  }
+  .logo-link {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .button-link {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  li.active {
+    a {
+      background-color: white;
+    }
+  }
+
+  &.minimized {
+    a {
+      &.nav-link {
+        padding: 1rem 1.5rem !important;
+      }
+    }
+  }
+}
