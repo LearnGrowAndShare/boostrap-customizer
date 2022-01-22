@@ -1,4 +1,6 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../common/function_overrides";
 @import "common_overrides";
 @import "common_property_enabling";
 @import "scrollbar";
-@import "variable"
+@import "variable";
