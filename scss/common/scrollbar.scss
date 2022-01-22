@@ -4,15 +4,15 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px white;
+  box-shadow: inset 0 0 5px --var(--scroll-bar-track);
   border-radius: 0.5rem;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: --var(--scroll-bar-thumb);
   border-radius: 0.5rem;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darken(red, 10);
+  background:  --var(--scroll-bar-thumb-hover);
 }

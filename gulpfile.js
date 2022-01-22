@@ -12,10 +12,10 @@ function buildLightCss() {
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer()]))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('build/css/light'))
+        .pipe(gulp.dest('docs/css/light'))
         .pipe(cleanCss())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('css/'))
+        .pipe(gulp.dest('docs/'))
 }
 
 
@@ -25,19 +25,32 @@ function buildDarkCss() {
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss([ autoprefixer()]))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest('build/css/dark'))
+      .pipe(gulp.dest('docs/css/dark'))
       .pipe(cleanCss({level: {1: {specialComments: false}}}))
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('css/'))
+      .pipe(gulp.dest('docs/'))
 }
 
+function buildDashboardCss() {
+  return gulp.src(['scss/dashboard/admin.scss'])
+      .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(postcss([ autoprefixer()]))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('docs/css/dashboard'))
+      .pipe(cleanCss({level: {1: {specialComments: false}}}))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('docs/'))
+}
+
+
 function buildDemo() {
-  return gulp.src(['demo/**/*']).pipe(gulp.dest('build/'))
+  return gulp.src(['demo/**/*']).pipe(gulp.dest('docs/'))
 }
 
 function watcher() {
     gulp.watch(['scss/*.scss'], gulp.parallel(buildLightCss, buildDarkCss));
 }
 
-exports.watch = gulp.series(gulp.parallel(buildLightCss, buildDarkCss), watcher);
-exports.default = gulp.parallel(buildLightCss, buildDarkCss, buildDemo);
+exports.watch = gulp.series(gulp.parallel(buildLightCss, buildDarkCss, buildDashboardCss, buildDemo), watcher);
+exports.default = gulp.parallel(buildLightCss, buildDarkCss, buildDashboardCss, buildDemo);
