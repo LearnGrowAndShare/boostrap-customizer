@@ -1,0 +1,39 @@
+@import "colors";
+
+[data-theme="demo-1"] {
+  --scroll-bar-track: $gray-400 !important;
+  --scroll-bar-thumb: $primary !important;
+  --scroll-bar-thumb-track: darken($primary, 10) !important;
+
+  --bs-blue: $blue !important;
+  --bs-indigo: $indigo !important;
+  --bs-purple: $purple !important;
+  --bs-pink: $pink !important;
+  --bs-red: $red !important;
+  --bs-orange: $orange !important;
+  --bs-yellow: $yellow !important;
+  --bs-green: $green !important;
+  --bs-teal: $teal !important;
+  --bs-cyan: $cyan !important;
+  --bs-white: $white !important;
+  --bs-gray: $gray !important;
+  --bs-gray-dark: $gray-900 !important;
+  --bs-primary: $primary !important;
+  --bs-secondary: $secondary !important;
+  --bs-success: $success !important;
+  --bs-info: $info !important;
+  --bs-warning: $warning !important;
+  --bs-danger: $danger !important;
+  --bs-light: $gray-300 !important;
+  --bs-dark: $gray-900 !important;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace !important;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  ) !important;
+}

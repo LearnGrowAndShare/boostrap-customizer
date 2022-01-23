@@ -10,7 +10,7 @@ var gulp  = require('gulp'),
 function buildThemeCss() {
     return gulp.src(
       [
-        'scss/themes/light/light.scss',
+        'scss/themes/light/*.scss',
         'scss/themes/dark/dark.scss',
         'scss/themes/demo-1/demo-1.scss',
         'scss/themes/demo-2/demo-2.scss',
