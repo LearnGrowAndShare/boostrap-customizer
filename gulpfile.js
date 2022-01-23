@@ -5,23 +5,22 @@ var gulp  = require('gulp'),
   rename = require('gulp-rename'),
   postcss      = require('gulp-postcss'),
   autoprefixer = require('autoprefixer');
+  const concat = require('gulp-concat');
 
-function buildLightCss() {
-    return gulp.src(['scss/light/*.scss'])
+function buildThemeCss() {
+    return gulp.src(
+      [
+        'scss/themes/light/light.scss',
+        'scss/themes/dark/dark.scss',
+        'scss/themes/demo-1/demo-1.scss',
+        'scss/themes/demo-2/demo-2.scss',
+        'scss/themes/demo-3/demo-3.scss',
+        'scss/themes/demo-4/demo-4.scss',
+        'scss/themes/demo-5/demo-5.scss'
+    ]
+      
+      )
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([ autoprefixer()]))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('docs/css/light'))
-        .pipe(cleanCss())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('docs/'))
-}
-
-
-function buildDarkCss() {
-  return gulp.src(['scss/dark/*.scss'])
-      .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss([ autoprefixer()]))
       .pipe(sourcemaps.write())
@@ -49,8 +48,8 @@ function buildDemo() {
 }
 
 function watcher() {
-    gulp.watch(['scss/*.scss'], gulp.parallel(buildLightCss, buildDarkCss));
+    gulp.watch(['scss/*.scss'], gulp.parallel(buildThemeCss));
 }
 
-exports.watch = gulp.series(gulp.parallel(buildLightCss, buildDarkCss, buildDashboardCss, buildDemo), watcher);
-exports.default = gulp.parallel(buildLightCss, buildDarkCss, buildDashboardCss, buildDemo);
+exports.watch = gulp.series(gulp.parallel(buildThemeCss, buildDashboardCss, buildDemo), watcher);
+exports.default = gulp.parallel(buildThemeCss, buildDashboardCss, buildDemo);
