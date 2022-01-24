@@ -1,0 +1,20 @@
+.themechanger {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 10px;
+}
+
+.themechanger select {
+    padding: 10px;
+    width: 100%;
+
+}
+
+.themechanger label {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+

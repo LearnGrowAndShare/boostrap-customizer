@@ -1,7 +1,8 @@
 @import "../../common/common";
 @import "variable";
 
-.light {
+
+  @include customScrollBar($gray-300, $primary);
   $theme-colors: (
     "primary": $primary,
     "secondary": $secondary,
@@ -15,4 +16,4 @@
   $body-color: $dark;
   $body-bg: $white;
   @import "../../../node_modules/bootstrap/scss/bootstrap";
-}
+
