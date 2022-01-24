@@ -50,6 +50,7 @@ function buildDemo() {
 function watcher() {
     gulp.watch(['scss/*.scss'], gulp.parallel(buildThemeCss));
 }
+//buildDashboardCss
 
 exports.watch = gulp.series(gulp.parallel(buildThemeCss, buildDashboardCss, buildDemo), watcher);
-exports.default = gulp.parallel(buildThemeCss, buildDashboardCss, buildDemo);
+exports.default = gulp.parallel(buildThemeCss, buildDemo);

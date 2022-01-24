@@ -5,10 +5,10 @@
     height: 2.5rem;
     width: 2.5rem;
     &:hover {
-      background-color: $gray-200;
+      background-color: var(--bs-gray-200);
     }
     &:active {
-      background-color: $gray-300;
+      background-color: var(--bs-gray-300);
     }
   }
   .navbar-search {
@@ -80,7 +80,7 @@
           position: absolute;
           bottom: 0;
           right: 0;
-          border: .125rem solid $white;
+          border: 0.125rem solid $white;
         }
       }
       .text-truncate {

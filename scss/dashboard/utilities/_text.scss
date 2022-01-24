@@ -1,7 +1,7 @@
 // Grayscale Text Utilities
 
 .text-xs {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .text-lg {
@@ -9,39 +9,39 @@
 }
 
 .text-gray-100 {
-  color: $gray-100 !important;
+  color: var(--bs-gray-100) !important;
 }
 
 .text-gray-200 {
-  color: $gray-200 !important;
+  color: var(--bs-gray-200) !important;
 }
 
 .text-gray-300 {
-  color: $gray-300 !important;
+  color: var(--bs-gray-300) !important;
 }
 
 .text-gray-400 {
-  color: $gray-400 !important;
+  color: var(--bs-gray-400) !important;
 }
 
 .text-gray-500 {
-  color: $gray-500 !important;
+  color: var(--bs-gray-500) !important;
 }
 
 .text-gray-600 {
-  color: $gray-600 !important;
+  color: var(--bs-gray-600) !important;
 }
 
 .text-gray-700 {
-  color: $gray-700 !important;
+  color: var(--bs-gray-700) !important;
 }
 
 .text-gray-800 {
-  color: $gray-800 !important;
+  color: var(--bs-gray-800) !important;
 }
 
 .text-gray-900 {
-  color: $gray-900 !important;
+  color: var(--bs-gray-900) !important;
 }
 
 .icon-circle {

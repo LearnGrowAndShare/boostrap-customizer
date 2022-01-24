@@ -19,7 +19,6 @@ a {
 #wrapper {
   display: flex;
   #content-wrapper {
-    background-color: $gray-100;
     width: 100%;
     overflow-x: hidden;
     #content {
@@ -44,15 +43,15 @@ a {
   width: 2.75rem;
   height: 2.75rem;
   text-align: center;
-  color: $white;
-  background: fade-out($gray-800, .5);
+  color: var(--bs-white);
+  //background: fade-out($gray-800, 0.5);
   line-height: 46px;
   &:focus,
   &:hover {
     color: white;
   }
   &:hover {
-    background: $gray-800;
+    // background: $gray-800;
   }
   i {
     font-weight: 800;
